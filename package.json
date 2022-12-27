@@ -1,0 +1,23 @@
+{
+  "name": "arcad-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-SRM/Arcad-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek-SRM/Arcad-App/issues"
+  },
+  "homepage": "https://github.com/Abhishek-SRM/Arcad-App#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

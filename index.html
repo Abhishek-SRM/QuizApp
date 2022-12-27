@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- FontAwesome-cdn include -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Google fonts include -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap-css include -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <!-- Animate-css include -->
+  <link rel="stylesheet" href="/assets/css/animate.min.css" />
+  <!-- Main-StyleSheet include -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Default form subscription -->
+  <!-- Section: Design Block -->
+  <section class="" id="userOption">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%); height: 100vh;">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center" style="margin: 179px auto;">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              The best offer <br />
+              <span class="text-primary">for your business</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero
+              veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div>
+
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <h1 class="text-center mb-5"> Choose the type of quiz</h1>
+                <form>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row">
+                    <div class="col-md-12 mb-4">
+                      <select class="form-control form-control-md" id="level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 mb-4">
+                      <select class="form-control form-control-md" id="qztype">
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals &amp; Theatres</option>
+                        <option value="20">Mythology</option>
+                        <option value="30">Science: Gadgets</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Submit button -->
+                  <a class="btn btn-primary btn-block mb-4" id="startquiz">
+                    Start Quiz
+                  </a>
+                  <!-- Register buttons -->
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <section class="" id="quizOption">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%); height: 100vh;">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center" style="margin: 179px auto;">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="ansCount">
+              <h4 class="text-dark p-2 border">Question : <span id="questionCount">1</span> of <span>10</span></h4>
+              <h4 class="text-success p-2 border">Correct Answer : <span id="right">1</span></h4>
+              <h4 class="text-danger p-2 border">Wrong Answer : <span id="wrong">1</span></h4>
+            </div>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero
+              veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div>
+
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <h4 class="text-center mb-5" id="questionBar">Choose the type of quiz</h4>
+                <form>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row">
+                    <div class="arc_options">
+                      <div>
+                        <span class="arc_opt mb-2" id="arc_opt1" onclick="checker(0)">Option 1</span>
+                        <span class="arc_opt mb-2" id="arc_opt2" onclick="checker(1)">Option 1</span>
+                        <span class="arc_opt mb-2" id="arc_opt3" onclick="checker(2)">Option 1</span>
+                        <span class="arc_opt mb-2" id="arc_opt4" onclick="checker(3)">Option 1</span>
+                      </div>
+                    </div>
+                    <!-- Submit button -->
+                    <a class="btn btn-primary btn-block mb-4 mt-3" id="nextBtn">
+                      Next
+                    </a>
+                    <a class="btn btn-warning btn-block mb-4 mt-3" id="finishBtn">
+                      Finish
+                    </a>
+
+                    <!-- Register buttons -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+
+  <section class="" id="userScore">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%); height: 100vh;">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center" style="margin: 129px auto;">
+          <div class="col-lg-12 mb-5 mb-lg-0">
+            <div class="d-flex justify-content-center">
+                <div class="container">
+                  <div class="banner-start">
+                    <div class="row align-items-md-center p-5">
+                      <div class="col-md-6">
+                        <div class="p-5 p-md-7">
+                          <!-- Heading -->
+                          <div class="mb-7">
+                            <span class="text-cap">Quiz Result</span>
+                            <h3>Awesome</h3>
+                            <hr>
+                          </div>
+                          <!-- End Heading -->
+                          <div class="d-grid gap-3">
+                            <!-- Info Block -->
+                            <div class="d-flex p-3 bg-white rounded">
+                              <div class="flex-shrink-0">
+                                <span class="svg-icon svg-icon-sm text-primary">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12 17C16.4183 17 20 13.4183 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9C4 13.4183 7.58172 17 12 17Z"
+                                      fill="#035A4B"></path>
+                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.53819 9L10.568 19.3624L11.976 18.8149L13.3745 19.3674L17.4703 9H6.53819ZM9.46188 11H14.5298L11.9759 17.4645L9.46188 11Z"
+                                      fill="#035A4B"></path>
+                                    <path opacity="0.3"
+                                      d="M10 22H14V22C14 23.1046 13.1046 24 12 24V24C10.8954 24 10 23.1046 10 22V22Z"
+                                      fill="#035A4B"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M8 17C8 16.4477 8.44772 16 9 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18C15.5523 18 16 18.4477 16 19C16 19.5523 15.5523 20 15 20C15.5523 20 16 20.4477 16 21C16 21.5523 15.5523 22 15 22H9C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C8.44772 20 8 19.5523 8 19C8 18.4477 8.44772 18 9 18C8.44772 18 8 17.5523 8 17Z"
+                                      fill="#035A4B"></path>
+                                  </svg>
+
+                                </span>
+                              </div>
+
+                              <div class="flex-grow-1 ms-4">
+                                <h5 class="text-success">
+                                  <span>Correct Answers <i class="bi-chevron-right small ms-1 small"></i></span>
+                                </h5>
+                                <h6 class="text-body text-success">9</h6>
+                              </div>
+                            </div>
+                            <!-- End Info Block -->
+
+                            <!-- Info Block -->
+                            <div class="d-flex p-3 bg-white rounded">
+                              <div class="flex-shrink-0">
+                                <span class="svg-icon svg-icon-sm text-primary">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3"
+                                      d="M21 18.3V4H20H5C4.4 4 4 4.4 4 5V20C10.9 20 16.7 15.6 19 9.5V18.3C18.4 18.6 18 19.3 18 20C18 21.1 18.9 22 20 22C21.1 22 22 21.1 22 20C22 19.3 21.6 18.6 21 18.3Z"
+                                      fill="#035A4B"></path>
+                                    <path
+                                      d="M22 4C22 2.9 21.1 2 20 2C18.9 2 18 2.9 18 4C18 4.7 18.4 5.29995 18.9 5.69995C18.1 12.6 12.6 18.2 5.70001 18.9C5.30001 18.4 4.7 18 4 18C2.9 18 2 18.9 2 20C2 21.1 2.9 22 4 22C4.8 22 5.39999 21.6 5.79999 20.9C13.8 20.1 20.1 13.7 20.9 5.80005C21.6 5.40005 22 4.8 22 4Z"
+                                      fill="#035A4B"></path>
+                                  </svg>
+
+                                </span>
+                              </div>
+
+                              <div class="flex-grow-1 ms-4">
+                                <h5 class="text-danger">
+                                  <span>Wrong Answers <i class="bi-chevron-right small ms-1 small"></i></span>
+                                </h5>
+                                <h6 class="text-body text-danger">1</h6>
+                              </div>
+                            </div>
+                            <!-- End Info Block -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Col -->
+
+                      <div class="col-md-6 content-space-md-1">
+                        <div class="w-85 w-md-100 mx-auto me-md-auto">
+                          <img class="img-fluid shadow rounded"
+                            src="https://img.freepik.com/free-vector/hand-drawn-innovation-concept_52683-76273.jpg?size=338&ext=jpg"
+                            alt="Image Description">
+                        </div>
+                      </div>
+                      <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                  </div>
+                  <p>
+                    <a onclick="showAllAnswer()" class="btn btn-primary my-2">Show Answers</a>
+                    <a href="index.html" class="btn btn-secondary my-2">Retake Test</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Jumbotron -->
+  </section>
+
+  <section class="" id="allAnswers">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%); height: 100vh;">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center" style="margin: 129px auto;">
+          <div class="col-lg-12 mb-5 mb-lg-0">
+            <div class="d-flex justify-content-center">
+              <div class="col-lg-9 mb-5 mb-lg-0">
+                 <h1>question</h1>
+                 <p>answer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Jumbotron -->
+  </section>
+
+</body>
+<!-- Custom-js include -->
+<script src="/assets/js/index.js"></script>
+
+</html>
