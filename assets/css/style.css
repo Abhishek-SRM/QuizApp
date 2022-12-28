@@ -514,3 +514,7 @@ button {
     font-size: 0.6rem;
   }
 }
+
+.btn-link{
+  text-decoration: none;
+}

@@ -133,16 +133,26 @@ strtBtn?.addEventListener("click", () => {
 let nextbtn = document.getElementById("nextBtn");
 nextbtn?.addEventListener("click", () => {
 
-  console.log(questionArray);
-  if (totalQuestion <= 2) {
-    quizInit();
-    refresh();
-  }
-  else {
-    if (finishbtn != null && nextbtn != null) {
-      finishbtn.style.display = 'block';
-      nextbtn.style.display = 'none';
+  let userResponse :string= ' ';
+  for (let i = 0; i < quizOptionName.length; i++) {
+    if (quizOptionName[i].classList.contains('correct') || quizOptionName[i].classList.contains('incorrect')) {
+       userResponse = 'OK';
     }
+  }
+  if (userResponse == 'OK') {
+    if (totalQuestion <= 10) {
+      quizInit();
+      refresh();
+    }
+    else {
+      if (finishbtn != null && nextbtn != null) {
+        finishbtn.style.display = 'block';
+        nextbtn.style.display = 'none';
+      }
+    }
+  }
+  else{
+    window.alert('Choose Atleast one Option')
   }
 });
 
@@ -204,15 +214,19 @@ function refresh() {
 }
 
 function showAllAnswer() {
-  if (userOption != null && quizOption != null && finishbtn != null && answerPage != null) {
+  if (userOption != null && quizOption != null && finishresult != null && answerPage != null) {
     userOption.style.display = 'none';
     quizOption.style.display = 'none';
-    finishbtn.style.display = 'none';
+    finishresult.style.display = 'none';
     answerPage.style.display = 'block';
-    let questiondta = document.querySelector('div.col-lg-9 h1');
-    for (let i = 0; i <= questionArray.length; i++) {
-      questiondta!.innerHTML = questionArray[i];
+
+    let questionData = document.getElementsByTagName("button");
+    let answerData = document.getElementsByClassName('answer')
+    for (let i = 0; i < questionArray.length; i++) {
+       questionData[i]!.innerHTML = questionArray[i];
+       answerData[i]!.innerHTML = answerArray[i];
     }
+    
   }
 }
 
